@@ -1,5 +1,7 @@
 #!/bin/bash
 
+bash /opt/echoStorage.sh
+
 . ${SCRIPTS:-/}start-utils
 
 umask 0002
@@ -44,3 +46,5 @@ if [ $(id -u) = 0 ]; then
 else
   exec ${SCRIPTS:-/}start-configuration $@
 fi
+
+bash /opt/echoStorage.sh
